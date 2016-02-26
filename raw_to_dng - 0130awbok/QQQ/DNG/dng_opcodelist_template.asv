@@ -1,0 +1,412 @@
+function opcodelist = dng_opcodelist_template(M)
+
+% 
+% At the start of opcode list, there is a 32-bit unsigned integer count, which contains the number
+% of opcodes in the list. This is followed by the data for each opcode.
+% Each opcode starts with a 32-bit unsigned integer, which contains the opcode ID. The opcode
+% ID identifies the specific opcode. Documentation for each supported opcode ID in provided
+% later in this chapter.
+
+% Next is a 32-bit unsigned integer, which contains the DNG specification version in which the
+% opcode ID was defined. It is expected that new opcode IDs will be defined in future DNG
+% specification versions. A DNG reader should never attempt to process an opcode with a
+% version higher than DNG specification it was written to support.
+
+% Next is a 32-bit unsigned integer, which contains various flag bits. There are two defined flag
+% bits. If bit 0 (the least significant bit) is set to 1, the opcode is considered optional, and the
+% DNG reader may decide to not apply this opcode if it wishes, or it does not understand the
+% opcode ID. If bit 1 (the second to least significant bit) is set to 1, the opcode can be skipped
+% when doing “preview quality” processing, and only needs to be applied when doing “full
+% quality” processing.
+
+% Next is a 32-bit unsigned integer, containing the number of bytes in a variable size parameter
+% area for the opcode. The format of this variable size parameter area is dependent on the
+% specific opcode ID, and is documented later in this chapter, along with each supported opcode
+% ID.
+
+% lscTableSize = 32 * 32 * 4;% lsc_h x lsc_v * sizeof(float)
+% opcodelist.NumberOfOpcodeGainMaps = 4;
+%opcodelist.mapplanes = 1;
+%opcodelist.mapsize = lscTableSize;
+
+
+%blue
+opcodelist = {...
+  struct('description','NumberOfOpcodeGainMaps','type',4,'count',1,'values',[4]),...
+  struct('description','OpcodeheaderB.OpcodeIDGainMap','type',4,'count',1,'values',[9]),...
+  struct('description','opcodelist.OpcodeheaderB.OpcodeSpecVer','type',4,'count',1,'values',[16973824]),...  
+  struct('description','opcodelist.OpcodeheaderB.OpcodeFlags','type',4,'count',1,'values',[0]),...
+  struct('description','opcodelist.OpcodeheaderB.OpcodeIDGainMapSize','type',4,'count',1,'values',[76+4*32*32]),...
+  struct('description','opcodelist.GainMapB.Top','type',4,'count',1,'values',[1]),...  
+  struct('description','opcodelist.GainMapB.Left','type',4,'count',1,'values',[0]),...    
+  struct('description','opcodelist.GainMapB.Right','type',4,'count',1,'values',M.heightM.width),...   
+  struct('description','opcodelist.GainMapB.Bottom','type',4,'count',1,'values',M.height),...     
+  struct('description','opcodelist.GainMapB.Plane','type',4,'count',1,'values',[0]),...       
+  struct('description','opcodelist.GainMapB.Planes','type',4,'count',1,'values',[1]),...       
+  struct('description','opcodelist.GainMapB.RowPitch','type',4,'count',1,'values',[2]),...       
+  struct('description','opcodelist.GainMapB.ColPitch','type',4,'count',1,'values',[2]),...  
+  struct('description','opcodelist.GainMapB.MapPointsH','type',4,'count',1,'values',[32]),...
+  struct('description','opcodelist.GainMapB.MapPointsV','type',4,'count',1,'values',[32]),...  
+  struct('description','opcodelist.GainMapB.MapSpacingH','type',12,'count',1,'values',[1.0/32]),...    
+  struct('description','opcodelist.GainMapB.MapSpacingV','type',12,'count',1,'values',[1.0/32]),...    
+  struct('description','opcodelist.GainMapB.MapOriginH','type',12,'count',1,'values',[0.0]),...    
+  struct('description','opcodelist.GainMapB.MapOriginV','type',12,'count',1,'values',[0.0]),...    
+  struct('description','opcodelist.GainMapB.MapPlanes','type',4,'count',1,'values',[1]),...    
+  struct('description','opcodelist.GainB','type',11,'count',32*32,'values',M.lensshading_b),...    
+  struct('description','OpcodeheaderB.OpcodeIDGainMap','type',4,'count',1,'values',[9]),...
+  struct('description','opcodelist.OpcodeheaderB.OpcodeSpecVer','type',4,'count',1,'values',[16973824]),...  
+  struct('description','opcodelist.OpcodeheaderB.OpcodeFlags','type',4,'count',1,'values',[0]),...
+  struct('description','opcodelist.OpcodeheaderB.OpcodeIDGainMapSize','type',4,'count',1,'values',[76+4*32*32]),...
+  struct('description','opcodelist.GainMapB.Top','type',4,'count',1,'values',[1]),...  
+  struct('description','opcodelist.GainMapB.Left','type',4,'count',1,'values',[1]),...    
+  struct('description','opcodelist.GainMapB.Right','type',4,'count',1,'values',M.width),...   
+  struct('description','opcodelist.GainMapB.Bottom','type',4,'count',1,'values',M.height),...     
+  struct('description','opcodelist.GainMapB.Plane','type',4,'count',1,'values',[0]),...       
+  struct('description','opcodelist.GainMapB.Planes','type',4,'count',1,'values',[1]),...       
+  struct('description','opcodelist.GainMapB.RowPitch','type',4,'count',1,'values',[2]),...       
+  struct('description','opcodelist.GainMapB.ColPitch','type',4,'count',1,'values',[2]),...  
+  struct('description','opcodelist.GainMapB.MapPointsH','type',4,'count',1,'values',[32]),...
+  struct('description','opcodelist.GainMapB.MapPointsV','type',4,'count',1,'values',[32]),...  
+  struct('description','opcodelist.GainMapB.MapSpacingH','type',12,'count',1,'values',[1.0/32]),...    
+  struct('description','opcodelist.GainMapB.MapSpacingV','type',12,'count',1,'values',[1.0/32]),...    
+  struct('description','opcodelist.GainMapB.MapOriginH','type',12,'count',1,'values',[0.0]),...    
+  struct('description','opcodelist.GainMapB.MapOriginV','type',12,'count',1,'values',[0.0]),...    
+  struct('description','opcodelist.GainMapB.MapPlanes','type',4,'count',1,'values',[1]),...    
+  struct('description','opcodelist.GainB','type',11,'count',32*32,'values',M.lensshading_g),...     
+  struct('description','OpcodeheaderB.OpcodeIDGainMap','type',4,'count',1,'values',[9]),...
+  struct('description','opcodelist.OpcodeheaderB.OpcodeSpecVer','type',4,'count',1,'values',[16973824]),...  
+  struct('description','opcodelist.OpcodeheaderB.OpcodeFlags','type',4,'count',1,'values',[0]),...
+  struct('description','opcodelist.OpcodeheaderB.OpcodeIDGainMapSize','type',4,'count',1,'values',[76+4*32*32]),...
+  struct('description','opcodelist.GainMapB.Top','type',4,'count',1,'values',[0]),...  
+  struct('description','opcodelist.GainMapB.Left','type',4,'count',1,'values',[0]),...    
+  struct('description','opcodelist.GainMapB.Right','type',4,'count',1,'values',M.width),...   
+  struct('description','opcodelist.GainMapB.Bottom','type',4,'count',1,'values',M.height),...     
+  struct('description','opcodelist.GainMapB.Plane','type',4,'count',1,'values',[0]),...       
+  struct('description','opcodelist.GainMapB.Planes','type',4,'count',1,'values',[1]),...       
+  struct('description','opcodelist.GainMapB.RowPitch','type',4,'count',1,'values',[2]),...       
+  struct('description','opcodelist.GainMapB.ColPitch','type',4,'count',1,'values',[2]),...  
+  struct('description','opcodelist.GainMapB.MapPointsH','type',4,'count',1,'values',[32]),...
+  struct('description','opcodelist.GainMapB.MapPointsV','type',4,'count',1,'values',[32]),...  
+  struct('description','opcodelist.GainMapB.MapSpacingH','type',12,'count',1,'values',[1.0/32]),...    
+  struct('description','opcodelist.GainMapB.MapSpacingV','type',12,'count',1,'values',[1.0/32]),...    
+  struct('description','opcodelist.GainMapB.MapOriginH','type',12,'count',1,'values',[0.0]),...    
+  struct('description','opcodelist.GainMapB.MapOriginV','type',12,'count',1,'values',[0.0]),...    
+  struct('description','opcodelist.GainMapB.MapPlanes','type',4,'count',1,'values',[1]),...    
+  struct('description','opcodelist.GainB','type',11,'count',32*32,'values',M.lensshading_g),...      
+  struct('description','OpcodeheaderB.OpcodeIDGainMap','type',4,'count',1,'values',[9]),...
+  struct('description','opcodelist.OpcodeheaderB.OpcodeSpecVer','type',4,'count',1,'values',[16973824]),...  
+  struct('description','opcodelist.OpcodeheaderB.OpcodeFlags','type',4,'count',1,'values',[0]),...
+  struct('description','opcodelist.OpcodeheaderB.OpcodeIDGainMapSize','type',4,'count',1,'values',[76+4*32*32]),...
+  struct('description','opcodelist.GainMapB.Top','type',4,'count',1,'values',[0]),...  
+  struct('description','opcodelist.GainMapB.Left','type',4,'count',1,'values',[1]),...    
+  struct('description','opcodelist.GainMapB.Right','type',4,'count',1,'values',M.width),...   
+  struct('description','opcodelist.GainMapB.Bottom','type',4,'count',1,'values',M.height),...     
+  struct('description','opcodelist.GainMapB.Plane','type',4,'count',1,'values',[0]),...       
+  struct('description','opcodelist.GainMapB.Planes','type',4,'count',1,'values',[1]),...       
+  struct('description','opcodelist.GainMapB.RowPitch','type',4,'count',1,'values',[2]),...       
+  struct('description','opcodelist.GainMapB.ColPitch','type',4,'count',1,'values',[2]),...  
+  struct('description','opcodelist.GainMapB.MapPointsH','type',4,'count',1,'values',[32]),...
+  struct('description','opcodelist.GainMapB.MapPointsV','type',4,'count',1,'values',[32]),...  
+  struct('description','opcodelist.GainMapB.MapSpacingH','type',12,'count',1,'values',[1.0/32]),...    
+  struct('description','opcodelist.GainMapB.MapSpacingV','type',12,'count',1,'values',[1.0/32]),...    
+  struct('description','opcodelist.GainMapB.MapOriginH','type',12,'count',1,'values',[0.0]),...    
+  struct('description','opcodelist.GainMapB.MapOriginV','type',12,'count',1,'values',[0.0]),...    
+  struct('description','opcodelist.GainMapB.MapPlanes','type',4,'count',1,'values',[1]),...    
+  struct('description','opcodelist.GainB','type',11,'count',32*32,'values',M.lensshading_r)};    
+  
+%   
+% opcodelist.OpcodeheaderB.OpcodeIDGainMap = 9;
+% opcodelist.OpcodeheaderB.OpcodeSpecVer = hex2dec('01040000'); % dng version 1.4
+% opcodelist.OpcodeheaderB.OpcodeFlags = 0;
+% opcodelist.OpcodeheaderB.OpcodeIDGainMapSize = M.opcodelist.gainheader_r.OpcodeIDGainMapSize;
+% 
+% opcodelist.GainMapB.Top = 1;
+% opcodelist.GainMapB.Left = 0;
+% opcodelist.GainMapB.Right = M.width;
+% opcodelist.GainMapB.Bottom = M.height;
+% opcodelist.GainMapB.Plane = 0;
+% opcodelist.GainMapB.Planes = 1;
+% opcodelist.GainMapB.RowPitch = 2;
+% opcodelist.GainMapB.ColPitch = 2;
+% opcodelist.GainMapB.MapPointsH = 32;%lsc table H
+% opcodelist.GainMapB.MapPointsV = 32;%lsc table V
+% opcodelist.GainMapB.MapOriginH = 0.0;
+% opcodelist.GainMapB.MapOriginV = 0.0;
+% opcodelist.GainMapB.MapSpacingH = 1.0/32;
+% opcodelist.GainMapB.MapSpacingV = 1.0/32;
+% opcodelist.GainMapB.MapPlanes = 1;
+% opcodelist.GainB = M.lensshading_b;
+% 
+% %Gr
+% opcodelist.OpcodeheaderGr.OpcodeIDGainMap = 9;
+% opcodelist.OpcodeheaderGr.OpcodeSpecVer = hex2dec('01040000'); % dng version 1.4
+% opcodelist.OpcodeheaderGr.OpcodeFlags = 0;
+% opcodelist.OpcodeheaderGr.OpcodeIDGainMapSize = M.opcodelist.gainheader_r.OpcodeIDGainMapSize;
+% 
+% opcodelist.GainMapGr.Top = 1;
+% opcodelist.GainMapGr.Left = 1;
+% opcodelist.GainMapGr.Right = M.width;
+% opcodelist.GainMapGr.Bottom = M.height;
+% opcodelist.GainMapGr.Plane = 0;
+% opcodelist.GainMapGr.Planes = 1;
+% opcodelist.GainMapGr.RowPitch = 2;
+% opcodelist.GainMapGr.ColPitch = 2;
+% opcodelist.GainMapGr.MapPointsH = 32;%lsc table H
+% opcodelist.GainMapGr.MapPointsV = 32;%lsc table V
+% opcodelist.GainMapGr.MapOriginH = 0.0;
+% opcodelist.GainMapGr.MapOriginV = 0.0;
+% opcodelist.GainMapGr.MapSpacingH = 1.0/32;
+% opcodelist.GainMapGr.MapSpacingV = 1.0/32;
+% opcodelist.GainMapGr.MapPlanes = 1;
+% opcodelist.GainGr = M.lensshading_g;
+% 
+% %Gb
+% opcodelist.OpcodeheaderGb.OpcodeIDGainMap = 9;
+% opcodelist.OpcodeheaderGb.OpcodeSpecVer = hex2dec('01040000'); % dng version 1.4
+% opcodelist.OpcodeheaderGb.OpcodeFlags = 0;
+% opcodelist.OpcodeheaderGb.OpcodeIDGainMapSize = M.opcodelist.gainheader_r.OpcodeIDGainMapSize;
+% 
+% opcodelist.GainMapGb.Top = 0;
+% opcodelist.GainMapGb.Left = 0;
+% opcodelist.GainMapGb.Right = M.width;
+% opcodelist.GainMapGb.Bottom = M.height;
+% opcodelist.GainMapGb.Plane = 0;
+% opcodelist.GainMapGb.Planes = 1;
+% opcodelist.GainMapGb.RowPitch = 2;
+% opcodelist.GainMapGb.ColPitch = 2;
+% opcodelist.GainMapGb.MapPointsH = 32;%lsc table H
+% opcodelist.GainMapGb.MapPointsV = 32;%lsc table V
+% opcodelist.GainMapGb.MapOriginH = 0.0;
+% opcodelist.GainMapGb.MapOriginV = 0.0;
+% opcodelist.GainMapGb.MapSpacingH = 1.0/32;
+% opcodelist.GainMapGb.MapSpacingV = 1.0/32;
+% opcodelist.GainMapGb.MapPlanes = 1;
+% opcodelist.GainGb = M.lensshading_g;
+% 
+% 
+% %R
+% 
+% % opcodelist.OpcodeIDGainMap = 9;
+% % opcodelist.OpcodeSpecVer = hex2dec('01040000'); % dng version 1.4
+% % opcodelist.OpcodeFlags = 0;
+% 
+% opcodelist.OpcodeheaderR.OpcodeIDGainMap = 9;
+% opcodelist.OpcodeheaderR.OpcodeSpecVer = hex2dec('01040000'); % dng version 1.4
+% opcodelist.OpcodeheaderR.OpcodeFlags = 0;
+% opcodelist.OpcodeheaderR.OpcodeIDGainMapSize = M.opcodelist.gainheader_r.OpcodeIDGainMapSize;
+% opcodelist.GainMapR.Top = 0;
+% opcodelist.GainMapR.Left = 1;
+% opcodelist.GainMapR.Right = M.width;
+% opcodelist.GainMapR.Bottom = M.height;
+% opcodelist.GainMapR.Plane = 0;
+% opcodelist.GainMapR.Planes = 1;
+% opcodelist.GainMapR.RowPitch = 2;
+% opcodelist.GainMapR.ColPitch = 2;
+% opcodelist.GainMapR.MapPointsH = 32;%lsc table H
+% opcodelist.GainMapR.MapPointsV = 32;%lsc table V
+% opcodelist.GainMapR.MapOriginH = 0.0;
+% opcodelist.GainMapR.MapOriginV = 0.0;
+% opcodelist.GainMapR.MapSpacingH = 1.0/32;
+% opcodelist.GainMapR.MapSpacingV = 1.0/32;
+% opcodelist.GainMapR.MapPlanes = 1;
+% opcodelist.GainR = M.lensshading_r;
+% 
+% 
+
+%aDngTemplate01->GainMapGr.iPlane = NIPS_SWAP_UINT32_BYTES( 0 );
+%     aDngTemplate01->GainMapGr.iPlanes = NIPS_SWAP8_UINT32_BYTES( 1 );
+%     aDngTemplate01->GainMapGr.iRowPitch = NIPS_SWAP_UINT32_BYTES( 2 );
+%     aDngTemplate01->GainMapGr.iColPitch = NIPS_SWAP_UINT32_BYTES( 2 );
+%     aDngTemplate01->GainMapGr.iMapPointsH = NIPS_SWAP16_UINT32_BYTES( LS_TABLE_H );
+%     aDngTemplate01->GainMapGr.iMapPointsV = NIPS_SWAP16_UINT32_BYTES( LS_TABLE_V );
+%     aDngTemplate01->GainMapGr.iMapOriginH = SetReal64(0.0);		
+%     aDngTemplate01->GainMapGr.iMapOriginV = SetReal64(0.0);		
+%     aDngTemplate01->GainMapGr.iMapSpacingH = SetReal64(1.0/(TNReal)LS_TABLE_H); 
+%     aDngTemplate01->GainMapGr.iMapSpacingV = SetReal64(1.0/(TNReal)LS_TABLE_V); 
+%     aDngTemplate01->GainHeaderGr.OpcodeIDGainMapSize = NIPS_SWAP_UINT32_BYTES( OpcodeIDGainMapSize );
+
+% function ifd = dng_opcodelist_template(M)
+%
+%     TNUint16 lscTableSize;
+%     TNUint32 OpcodeIDGainMapSize = 0;
+%     const TNUint8 numOfPlanes = 4;
+% 
+%     lscTableSize = LS_TABLE_H * LS_TABLE_V * sizeof(TNReal32);
+% 
+%     aDngTemplate01->NumberOfOpcodeGainMaps = NIPS_SWAP8_UINT32_BYTES( numOfPlanes );
+% 
+%     OpcodeIDGainMapSize = sizeof(aDngTemplate01->GainMapB) + sizeof(TNUint32); 
+%     OpcodeIDGainMapSize += lscTableSize;
+% 
+%     aDngTemplate01->iMapPlanes = NIPS_SWAP_UINT32_BYTES( 1 );
+%     aDngTemplate01->iMapSize = lscTableSize;
+% 
+%     // ---------------------- Plane B ------------------------------
+% 
+%     // Common values
+%     aDngTemplate01->GainHeaderB.OpcodeIDGainMap = NIPS_SWAP16_UINT32_BYTES( KTiffTagOpcodeGainMapId );
+%     aDngTemplate01->GainHeaderB.OpcodeSpecVer = NIPS_SWAP_UINT32_BYTES( KDngVersion_1_3_0_0 );
+%     aDngTemplate01->GainHeaderB.OpcodeFlags = NIPS_SWAP_UINT32_BYTES ( KValueNull );
+% 
+%     if (OrderCorrection(3,aFormat) &0x2)
+%     {
+%         aDngTemplate01->GainMapB.iTop = NIPS_SWAP8_UINT32_BYTES( 1 );
+%     }
+%     else 
+%     {
+%         aDngTemplate01->GainMapB.iTop = NIPS_SWAP8_UINT32_BYTES( 0 );
+%     }
+%     if (OrderCorrection(3,aFormat) &0x1)
+%     {
+%         aDngTemplate01->GainMapB.iLeft = NIPS_SWAP8_UINT32_BYTES( 1 );
+%     }
+%     else
+%     {
+%         aDngTemplate01->GainMapB.iLeft = NIPS_SWAP8_UINT32_BYTES( 0 );
+%     }
+%     aDngTemplate01->GainMapB.iRight = NIPS_SWAP_UINT32_BYTES( aTRaw2Dng->iTR2D_Input->iRawDataFormat->iWidth );
+%     aDngTemplate01->GainMapB.iBottom = NIPS_SWAP_UINT32_BYTES( aTRaw2Dng->iTR2D_Input->iRawDataFormat->iHeight );
+%     aDngTemplate01->GainMapB.iPlane = NIPS_SWAP_UINT32_BYTES( 0 );
+%     aDngTemplate01->GainMapB.iPlanes = NIPS_SWAP8_UINT32_BYTES( 1 );
+%     aDngTemplate01->GainMapB.iRowPitch = NIPS_SWAP_UINT32_BYTES( 2 );
+%     aDngTemplate01->GainMapB.iColPitch = NIPS_SWAP_UINT32_BYTES( 2 );
+%     aDngTemplate01->GainMapB.iMapPointsH = NIPS_SWAP16_UINT32_BYTES( LS_TABLE_H );
+%     aDngTemplate01->GainMapB.iMapPointsV = NIPS_SWAP16_UINT32_BYTES( LS_TABLE_V );
+%     aDngTemplate01->GainMapB.iMapOriginH = SetReal64(0.0);		
+%     aDngTemplate01->GainMapB.iMapOriginV = SetReal64(0.0);		
+%     aDngTemplate01->GainMapB.iMapSpacingH = SetReal64(1.0/(TNReal)LS_TABLE_H); 
+%     aDngTemplate01->GainMapB.iMapSpacingV = SetReal64(1.0/(TNReal)LS_TABLE_V); 
+%     aDngTemplate01->GainHeaderB.OpcodeIDGainMapSize = NIPS_SWAP_UINT32_BYTES( OpcodeIDGainMapSize );
+% 
+% 
+%     // ---------------------- Plane Gb ------------------------------
+% 
+%     // Common values
+%     aDngTemplate01->GainHeaderGb.OpcodeIDGainMap = NIPS_SWAP16_UINT32_BYTES( KTiffTagOpcodeGainMapId );
+%     aDngTemplate01->GainHeaderGb.OpcodeSpecVer = NIPS_SWAP_UINT32_BYTES( KDngVersion_1_3_0_0 );
+%     aDngTemplate01->GainHeaderGb.OpcodeFlags = NIPS_SWAP_UINT32_BYTES ( KValueNull );
+% 
+%     if (OrderCorrection(2,aFormat) &0x2)
+%     {
+%         aDngTemplate01->GainMapGb.iTop = NIPS_SWAP8_UINT32_BYTES( 1 );
+%     }
+%     else 
+%     {
+%         aDngTemplate01->GainMapGb.iTop = NIPS_SWAP8_UINT32_BYTES( 0 );
+%     }
+%     if (OrderCorrection(2,aFormat) &0x1)
+%     {
+%         aDngTemplate01->GainMapGb.iLeft = NIPS_SWAP8_UINT32_BYTES( 1 );
+%     }
+%     else
+%     {
+%         aDngTemplate01->GainMapGb.iLeft = NIPS_SWAP8_UINT32_BYTES( 0 );
+%     }
+%     aDngTemplate01->GainMapGb.iRight = NIPS_SWAP_UINT32_BYTES( aTRaw2Dng->iTR2D_Input->iRawDataFormat->iWidth );
+%     aDngTemplate01->GainMapGb.iBottom = NIPS_SWAP_UINT32_BYTES( aTRaw2Dng->iTR2D_Input->iRawDataFormat->iHeight );
+%     aDngTemplate01->GainMapGb.iPlane = NIPS_SWAP_UINT32_BYTES( 0 );
+%     aDngTemplate01->GainMapGb.iPlanes = NIPS_SWAP8_UINT32_BYTES( 1 );
+%     aDngTemplate01->GainMapGb.iRowPitch = NIPS_SWAP_UINT32_BYTES( 2 );
+%     aDngTemplate01->GainMapGb.iColPitch = NIPS_SWAP_UINT32_BYTES( 2 );
+%     aDngTemplate01->GainMapGb.iMapPointsH = NIPS_SWAP16_UINT32_BYTES( LS_TABLE_H );
+%     aDngTemplate01->GainMapGb.iMapPointsV = NIPS_SWAP16_UINT32_BYTES( LS_TABLE_V );
+%     aDngTemplate01->GainMapGb.iMapOriginH = SetReal64(0.0);		
+%     aDngTemplate01->GainMapGb.iMapOriginV = SetReal64(0.0);		
+%     aDngTemplate01->GainMapGb.iMapSpacingH = SetReal64(1.0/(TNReal)LS_TABLE_H); 
+%     aDngTemplate01->GainMapGb.iMapSpacingV = SetReal64(1.0/(TNReal)LS_TABLE_V); 
+%     aDngTemplate01->GainHeaderGb.OpcodeIDGainMapSize = NIPS_SWAP_UINT32_BYTES( OpcodeIDGainMapSize );
+% 
+%     // ---------------------- Plane Gr ------------------------------
+% 
+%     // Common values
+%     aDngTemplate01->GainHeaderGr.OpcodeIDGainMap = NIPS_SWAP16_UINT32_BYTES( KTiffTagOpcodeGainMapId );
+%     aDngTemplate01->GainHeaderGr.OpcodeSpecVer = NIPS_SWAP_UINT32_BYTES( KDngVersion_1_3_0_0 );
+%     aDngTemplate01->GainHeaderGr.OpcodeFlags = NIPS_SWAP_UINT32_BYTES ( KValueNull );
+% 
+%     if (OrderCorrection(1,aFormat) &0x2) 
+%     {
+%         aDngTemplate01->GainMapGr.iTop = NIPS_SWAP8_UINT32_BYTES( 1 );
+%     }
+%     else 
+%     {
+%        aDngTemplate01->GainMapGr.iTop = NIPS_SWAP8_UINT32_BYTES( 0 );
+%     }
+%     if (OrderCorrection(1,aFormat) &0x1) 
+%     {
+%         aDngTemplate01->GainMapGr.iLeft = NIPS_SWAP8_UINT32_BYTES( 1 );
+%     }
+%     else 
+%     {
+%         aDngTemplate01->GainMapGr.iLeft = NIPS_SWAP8_UINT32_BYTES( 0 );
+%     }
+%     aDngTemplate01->GainMapGr.iRight = NIPS_SWAP_UINT32_BYTES( aTRaw2Dng->iTR2D_Input->iRawDataFormat->iWidth );
+%     aDngTemplate01->GainMapGr.iBottom = NIPS_SWAP_UINT32_BYTES( aTRaw2Dng->iTR2D_Input->iRawDataFormat->iHeight );
+%     aDngTemplate01->GainMapGr.iPlane = NIPS_SWAP_UINT32_BYTES( 0 );
+%     aDngTemplate01->GainMapGr.iPlanes = NIPS_SWAP8_UINT32_BYTES( 1 );
+%     aDngTemplate01->GainMapGr.iRowPitch = NIPS_SWAP_UINT32_BYTES( 2 );
+%     aDngTemplate01->GainMapGr.iColPitch = NIPS_SWAP_UINT32_BYTES( 2 );
+%     aDngTemplate01->GainMapGr.iMapPointsH = NIPS_SWAP16_UINT32_BYTES( LS_TABLE_H );
+%     aDngTemplate01->GainMapGr.iMapPointsV = NIPS_SWAP16_UINT32_BYTES( LS_TABLE_V );
+%     aDngTemplate01->GainMapGr.iMapOriginH = SetReal64(0.0);		
+%     aDngTemplate01->GainMapGr.iMapOriginV = SetReal64(0.0);		
+%     aDngTemplate01->GainMapGr.iMapSpacingH = SetReal64(1.0/(TNReal)LS_TABLE_H); 
+%     aDngTemplate01->GainMapGr.iMapSpacingV = SetReal64(1.0/(TNReal)LS_TABLE_V); 
+%     aDngTemplate01->GainHeaderGr.OpcodeIDGainMapSize = NIPS_SWAP_UINT32_BYTES( OpcodeIDGainMapSize );
+% 
+% 
+%     // ---------------------- Plane R ------------------------------
+% 
+%     // Common values
+%     aDngTemplate01->GainHeaderR.OpcodeIDGainMap = NIPS_SWAP16_UINT32_BYTES( KTiffTagOpcodeGainMapId );
+%     aDngTemplate01->GainHeaderR.OpcodeSpecVer = NIPS_SWAP_UINT32_BYTES( KDngVersion_1_3_0_0 );
+%     aDngTemplate01->GainHeaderR.OpcodeFlags = NIPS_SWAP_UINT32_BYTES ( KValueNull );
+%     
+%     if (OrderCorrection(0,aFormat) &0x2) 
+%     {
+%         aDngTemplate01->GainMapR.iTop = NIPS_SWAP8_UINT32_BYTES( 1 );
+%     }
+%     else
+%     {
+%         aDngTemplate01->GainMapR.iTop = NIPS_SWAP8_UINT32_BYTES( 0 );
+%     }
+%     if (OrderCorrection(0,aFormat) &0x1)
+%     {
+%         aDngTemplate01->GainMapR.iLeft = NIPS_SWAP8_UINT32_BYTES( 1 );
+%     }
+%     else 
+%     {
+%         aDngTemplate01->GainMapR.iLeft = NIPS_SWAP8_UINT32_BYTES( 0 );
+%     }
+%     aDngTemplate01->GainMapR.iRight = NIPS_SWAP_UINT32_BYTES( aTRaw2Dng->iTR2D_Input->iRawDataFormat->iWidth );
+%     aDngTemplate01->GainMapR.iBottom = NIPS_SWAP_UINT32_BYTES( aTRaw2Dng->iTR2D_Input->iRawDataFormat->iHeight );
+%     aDngTemplate01->GainMapR.iPlane = NIPS_SWAP_UINT32_BYTES( 0 );
+%     aDngTemplate01->GainMapR.iPlanes = NIPS_SWAP8_UINT32_BYTES( 1 );
+%     aDngTemplate01->GainMapR.iRowPitch = NIPS_SWAP_UINT32_BYTES( 2 );
+%     aDngTemplate01->GainMapR.iColPitch = NIPS_SWAP_UINT32_BYTES( 2 );
+%     aDngTemplate01->GainMapR.iMapPointsH = NIPS_SWAP16_UINT32_BYTES( LS_TABLE_H );
+%     aDngTemplate01->GainMapR.iMapPointsV = NIPS_SWAP16_UINT32_BYTES( LS_TABLE_V );
+%     aDngTemplate01->GainMapR.iMapOriginH = SetReal64(0.0);		
+%     aDngTemplate01->GainMapR.iMapOriginV = SetReal64(0.0);		
+%     aDngTemplate01->GainMapR.iMapSpacingH = SetReal64(1.0/(TNReal)LS_TABLE_H); 
+%     aDngTemplate01->GainMapR.iMapSpacingV = SetReal64(1.0/(TNReal)LS_TABLE_V); 
+%     aDngTemplate01->GainHeaderR.OpcodeIDGainMapSize = NIPS_SWAP_UINT32_BYTES( OpcodeIDGainMapSize );
+% 
+%     return (TNUint32)(sizeof(aDngTemplate01->NumberOfOpcodeGainMaps) + 
+%         numOfPlanes * ( sizeof(aDngTemplate01->GainHeaderB) + OpcodeIDGainMapSize));
+% 
+% 
+% 
+% 
+% ifd = {...
+%   struct('tag',33434,'description','ExposureTime','type',5,'count',1,'values',M.exposure_time),...
+%   struct('tag',33437,'description','FNumber','type',5,'count',1,'values',M.aperture),...
+%   struct('tag',34850,'description','ExposureProgram','type',3,'count',1,'values',[0]),...
+%   struct('tag',34855,'description','ISOSpeedRatings','type',3,'count',1,'values',M.iso_speed),...
+%   struct('tag',36867,'description','DateTimeOriginal','type',2,'count',length(M.date_time)+1,'values',[M.date_time 0]),...
+%   struct('tag',37377,'description','ShutterSpeedValue','type',10,'count',1,'values',-log2(M.exposure_time)),...
+%   struct('tag',37378,'description','ApertureValue','type',5,'count',1,'values',2*log2(2.8)),...
+%   struct('tag',37380,'description','ExposureBiasValue','type',10,'count',1,'values',[0]),...
+%   struct('tag',37381,'description','MaxApertureValue','type',5,'count',1,'values',2*log2(M.aperture)),...
+%   struct('tag',37383,'description','MeteringMode','type',3,'count',1,'values',[2]),...
+%   struct('tag',37385,'description','Flash','type',3,'count',1,'values',M.flash),...
+%   struct('tag',37386,'description','FocalLength','type',5,'count',1,'values',[M.focal_length])};

@@ -1,0 +1,151 @@
+function offset_data = write_opcodelist_g(opcodelist, offset_opcodelist, offset_data, byte_order)
+
+
+global data
+ifd = opcodelist;
+ifd_offset = offset_opcodelist;
+N = length(ifd);
+% put2g(ifd_offset, N, byte_order);
+
+for i=1:N
+    sz = size_of_type(typ);
+N=length(val);
+    sz = opcodelist[i].type
+  offset_data = write_opcodelist_entry_g(ifd{i}, ifd_offset, ...
+				  offset_data, byte_order);
+   ifd_offset = ifd_offset + sz;
+end
+ put4g(ifd_offset+(4+4*(16+76+4*32*32))+2, 0, byte_order);
+
+
+%N = length(ifd);
+% put4g(ifd_offset, N, byte_order);
+% for i=1:N
+%   offset_data = write_ifd_entry_g(ifd{i}, ifd_offset+12*(i-1)+2, ...
+% 				  offset_data, byte_order);
+% end
+% put4g(ifd_offset+12*N+2, 0, byte_order);
+
+% opcodelist.OpcodeheaderB.OpcodeIDGainMap = 9;
+% value[size(opcodelist)] = 
+% structNames = (fieldnames(opcodelist));
+% for i=1:length(fieldnames(opcodelist))
+%     name=structNames{i};
+%    opcode =[opcode opcodelist.(name)];
+% end
+% 
+% % for i =1:length(opcode)
+% %     put4g(opcode, opcodelist.OpcodeheaderB.OpcodeIDGainMap, byte_order);    
+% % end
+% 
+% N=length(opcode);
+%   for i=1:N
+%     put_value_g(offset_data, opcode(i), typ, byte_order);
+%     offset_data = offset_data + 4;
+%   end
+% 
+% 
+% offset_data = round_up(offset_data);
+% 
+% 
+% 
+% 
+% 
+% opcodelist.OpcodeheaderB.OpcodeSpecVer = hex2dec('01040000'); % dng version 1.4
+% put4g(offset_Opcodelist, opcodelist.OpcodeheaderB.OpcodeIDGainMap, byte_order);
+% 
+% 
+% 
+% opcodelist.OpcodeheaderB.OpcodeFlags = 0;
+% opcodelist.OpcodeheaderB.OpcodeIDGainMapSize = M.opcodelist.gainheader_r.OpcodeIDGainMapSize;
+% 
+% opcodelist.GainMapB.Top = 1;
+% opcodelist.GainMapB.Left = 0;
+% opcodelist.GainMapB.Right = M.width;
+% opcodelist.GainMapB.Bottom = M.height;
+% opcodelist.GainMapB.Plane = 0;
+% opcodelist.GainMapB.Planes = 1;
+% opcodelist.GainMapB.RowPitch = 2;
+% opcodelist.GainMapB.ColPitch = 2;
+% opcodelist.GainMapB.MapPointsH = 32;%lsc table H
+% opcodelist.GainMapB.MapPointsV = 32;%lsc table V
+% opcodelist.GainMapB.MapOriginH = 0.0;
+% opcodelist.GainMapB.MapOriginV = 0.0;
+% opcodelist.GainMapB.MapSpacingH = 1.0/32;
+% opcodelist.GainMapB.MapSpacingV = 1.0/32;
+% opcodelist.GainMapB.MapPlanes = 1;
+% opcodelist.GainB = M.lensshading_b;
+% 
+% %Gr
+% opcodelist.OpcodeheaderGr.OpcodeIDGainMap = 9;
+% opcodelist.OpcodeheaderGr.OpcodeSpecVer = hex2dec('01040000'); % dng version 1.4
+% opcodelist.OpcodeheaderGr.OpcodeFlags = 0;
+% opcodelist.OpcodeheaderGr.OpcodeIDGainMapSize = M.opcodelist.gainheader_r.OpcodeIDGainMapSize;
+% 
+% opcodelist.GainMapGr.Top = 1;
+% opcodelist.GainMapGr.Left = 1;
+% opcodelist.GainMapGr.Right = M.width;
+% opcodelist.GainMapGr.Bottom = M.height;
+% opcodelist.GainMapGr.Plane = 0;
+% opcodelist.GainMapGr.Planes = 1;
+% opcodelist.GainMapGr.RowPitch = 2;
+% opcodelist.GainMapGr.ColPitch = 2;
+% opcodelist.GainMapGr.MapPointsH = 32;%lsc table H
+% opcodelist.GainMapGr.MapPointsV = 32;%lsc table V
+% opcodelist.GainMapGr.MapOriginH = 0.0;
+% opcodelist.GainMapGr.MapOriginV = 0.0;
+% opcodelist.GainMapGr.MapSpacingH = 1.0/32;
+% opcodelist.GainMapGr.MapSpacingV = 1.0/32;
+% opcodelist.GainMapGr.MapPlanes = 1;
+% opcodelist.GainGr = M.lensshading_g;
+% 
+% %Gb
+% opcodelist.OpcodeheaderGb.OpcodeIDGainMap = 9;
+% opcodelist.OpcodeheaderGb.OpcodeSpecVer = hex2dec('01040000'); % dng version 1.4
+% opcodelist.OpcodeheaderGb.OpcodeFlags = 0;
+% opcodelist.OpcodeheaderGb.OpcodeIDGainMapSize = M.opcodelist.gainheader_r.OpcodeIDGainMapSize;
+% 
+% opcodelist.GainMapGb.Top = 0;
+% opcodelist.GainMapGb.Left = 0;
+% opcodelist.GainMapGb.Right = M.width;
+% opcodelist.GainMapGb.Bottom = M.height;
+% opcodelist.GainMapGb.Plane = 0;
+% opcodelist.GainMapGb.Planes = 1;
+% opcodelist.GainMapGb.RowPitch = 2;
+% opcodelist.GainMapGb.ColPitch = 2;
+% opcodelist.GainMapGb.MapPointsH = 32;%lsc table H
+% opcodelist.GainMapGb.MapPointsV = 32;%lsc table V
+% opcodelist.GainMapGb.MapOriginH = 0.0;
+% opcodelist.GainMapGb.MapOriginV = 0.0;
+% opcodelist.GainMapGb.MapSpacingH = 1.0/32;
+% opcodelist.GainMapGb.MapSpacingV = 1.0/32;
+% opcodelist.GainMapGb.MapPlanes = 1;
+% opcodelist.GainGb = M.lensshading_g;
+% 
+% 
+% %R
+% 
+% % opcodelist.OpcodeIDGainMap = 9;
+% % opcodelist.OpcodeSpecVer = hex2dec('01040000'); % dng version 1.4
+% % opcodelist.OpcodeFlags = 0;
+% 
+% opcodelist.OpcodeheaderR.OpcodeIDGainMap = 9;
+% opcodelist.OpcodeheaderR.OpcodeSpecVer = hex2dec('01040000'); % dng version 1.4
+% opcodelist.OpcodeheaderR.OpcodeFlags = 0;
+% opcodelist.OpcodeheaderR.OpcodeIDGainMapSize = M.opcodelist.gainheader_r.OpcodeIDGainMapSize;
+% opcodelist.GainMapR.Top = 0;
+% opcodelist.GainMapR.Left = 1;
+% opcodelist.GainMapR.Right = M.width;
+% opcodelist.GainMapR.Bottom = M.height;
+% opcodelist.GainMapR.Plane = 0;
+% opcodelist.GainMapR.Planes = 1;
+% opcodelist.GainMapR.RowPitch = 2;
+% opcodelist.GainMapR.ColPitch = 2;
+% opcodelist.GainMapR.MapPointsH = 32;%lsc table H
+% opcodelist.GainMapR.MapPointsV = 32;%lsc table V
+% opcodelist.GainMapR.MapOriginH = 0.0;
+% opcodelist.GainMapR.MapOriginV = 0.0;
+% opcodelist.GainMapR.MapSpacingH = 1.0/32;
+% opcodelist.GainMapR.MapSpacingV = 1.0/32;
+% opcodelist.GainMapR.MapPlanes = 1;
+% opcodelist.GainR = M.lensshading_r;

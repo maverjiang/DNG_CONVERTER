@@ -1,0 +1,3370 @@
+octave:2> dng_parse
+byte_order = b
+count =  37
+count =  24
+count =  15
+count =  11
+interp =  32803
+width =  2012
+height =  1324
+bits_per_sample =  16
+compression =  1
+interpretation =  32803
+offset =  175306
+samples =  1
+rows_per_strip =  1324
+strip_byte_counts =  5327776
+planar_config =  1
+pattern_dim =
+
+   2   2
+
+pattern =
+
+   2   1   1   0
+
+plane_color =
+
+   0   1   2
+
+layout =  1
+white =  4095
+width =  256
+height =  168
+bits_per_sample =
+
+   8   8   8
+
+compression =  1
+interpretation =  2
+offset =  7922
+samples =  3
+rows_per_strip =  168
+strip_byte_counts =  129024
+planar_config =  1
+octave:3> ifd0
+ifd0 =
+
+{
+  [1,1] =
+  {
+    tag =  254
+    description = NewSubfileType
+    type =  4
+    type_name = long
+    count =  1
+    length_in_bytes =  4
+    value_or_offset =  1
+    value_or_offset_is_value =  1
+    values =  1
+  }
+
+  [1,2] =
+  {
+    tag =  256
+    description = ImageWidth
+    type =  4
+    type_name = long
+    count =  1
+    length_in_bytes =  4
+    value_or_offset =  256
+    value_or_offset_is_value =  1
+    values =  256
+  }
+
+  [1,3] =
+  {
+    tag =  257
+    description = ImageLength
+    type =  4
+    type_name = long
+    count =  1
+    length_in_bytes =  4
+    value_or_offset =  168
+    value_or_offset_is_value =  1
+    values =  168
+  }
+
+  [1,4] =
+  {
+    tag =  258
+    description = BitsPerSample
+    type =  3
+    type_name = short
+    count =  3
+    length_in_bytes =  6
+    value_or_offset =  458
+    value_or_offset_is_value = 0
+    values =
+
+       8   8   8
+
+  }
+
+  [1,5] =
+  {
+    tag =  259
+    description = Compression
+    type =  3
+    type_name = short
+    count =  1
+    length_in_bytes =  2
+    value_or_offset =  1
+    value_or_offset_is_value =  1
+    values =  1
+  }
+
+  [1,6] =
+  {
+    tag =  262
+    description = PhotometricInterpretation
+    type =  3
+    type_name = short
+    count =  1
+    length_in_bytes =  2
+    value_or_offset =  2
+    value_or_offset_is_value =  1
+    values =  2
+  }
+
+  [1,7] =
+  {
+    tag =  271
+    description = Make
+    type =  2
+    type_name = ascii
+    count =  18
+    length_in_bytes =  18
+    value_or_offset =  464
+    value_or_offset_is_value = 0
+    values = NIKON CORPORATION
+  }
+
+  [1,8] =
+  {
+    tag =  272
+    description = Model
+    type =  2
+    type_name = ascii
+    count =  9
+    length_in_bytes =  9
+    value_or_offset =  482
+    value_or_offset_is_value = 0
+    values = NIKON D1
+  }
+
+  [1,9] =
+  {
+    tag =  273
+    description = StripOffsets
+    type =  4
+    type_name = long
+    count =  1
+    length_in_bytes =  4
+    value_or_offset =  7922
+    value_or_offset_is_value =  1
+    values =  7922
+  }
+
+  [1,10] =
+  {
+    tag =  274
+    description = Orientation
+    type =  3
+    type_name = short
+    count =  1
+    length_in_bytes =  2
+    value_or_offset =  1
+    value_or_offset_is_value =  1
+    values =  1
+  }
+
+  [1,11] =
+  {
+    tag =  277
+    description = SamplesPerPixel
+    type =  3
+    type_name = short
+    count =  1
+    length_in_bytes =  2
+    value_or_offset =  3
+    value_or_offset_is_value =  1
+    values =  3
+  }
+
+  [1,12] =
+  {
+    tag =  278
+    description = RowsPerStrip
+    type =  4
+    type_name = long
+    count =  1
+    length_in_bytes =  4
+    value_or_offset =  168
+    value_or_offset_is_value =  1
+    values =  168
+  }
+
+  [1,13] =
+  {
+    tag =  279
+    description = StripByteCounts
+    type =  4
+    type_name = long
+    count =  1
+    length_in_bytes =  4
+    value_or_offset =  129024
+    value_or_offset_is_value =  1
+    values =  129024
+  }
+
+  [1,14] =
+  {
+    tag =  284
+    description = PlanarConfiguration
+    type =  3
+    type_name = short
+    count =  1
+    length_in_bytes =  2
+    value_or_offset =  1
+    value_or_offset_is_value =  1
+    values =  1
+  }
+
+  [1,15] =
+  {
+    tag =  305
+    description = Software
+    type =  2
+    type_name = ascii
+    count =  9
+    length_in_bytes =  9
+    value_or_offset =  492
+    value_or_offset_is_value = 0
+    values = Ver.1.05
+  }
+
+  [1,16] =
+  {
+    tag =  306
+    description = DateTime
+    type =  2
+    type_name = ascii
+    count =  20
+    length_in_bytes =  20
+    value_or_offset =  502
+    value_or_offset_is_value = 0
+    values = 2005:09:03 20:58:44
+  }
+
+  [1,17] =
+  {
+    tag =  330
+    description = SubIFDs
+    type =  4
+    type_name = long
+    count =  2
+    length_in_bytes =  8
+    value_or_offset =  522
+    value_or_offset_is_value = 0
+    values =
+
+    {
+      [1,1] =
+
+      {
+        [1,1] =
+        {
+          tag =  254
+          description = NewSubfileType
+          type =  4
+          type_name = long
+          count =  1
+          length_in_bytes =  4
+          value_or_offset = 0
+          value_or_offset_is_value =  1
+          values = 0
+        }
+
+        [1,2] =
+        {
+          tag =  256
+          description = ImageWidth
+          type =  4
+          type_name = long
+          count =  1
+          length_in_bytes =  4
+          value_or_offset =  2012
+          value_or_offset_is_value =  1
+          values =  2012
+        }
+
+        [1,3] =
+        {
+          tag =  257
+          description = ImageLength
+          type =  4
+          type_name = long
+          count =  1
+          length_in_bytes =  4
+          value_or_offset =  1324
+          value_or_offset_is_value =  1
+          values =  1324
+        }
+
+        [1,4] =
+        {
+          tag =  258
+          description = BitsPerSample
+          type =  3
+          type_name = short
+          count =  1
+          length_in_bytes =  2
+          value_or_offset =  16
+          value_or_offset_is_value =  1
+          values =  16
+        }
+
+        [1,5] =
+        {
+          tag =  259
+          description = Compression
+          type =  3
+          type_name = short
+          count =  1
+          length_in_bytes =  2
+          value_or_offset =  1
+          value_or_offset_is_value =  1
+          values =  1
+        }
+
+        [1,6] =
+        {
+          tag =  262
+          description = PhotometricInterpretation
+          type =  3
+          type_name = short
+          count =  1
+          length_in_bytes =  2
+          value_or_offset =  32803
+          value_or_offset_is_value =  1
+          values =  32803
+        }
+
+        [1,7] =
+        {
+          tag =  273
+          description = StripOffsets
+          type =  4
+          type_name = long
+          count =  1
+          length_in_bytes =  4
+          value_or_offset =  175306
+          value_or_offset_is_value =  1
+          values =  175306
+        }
+
+        [1,8] =
+        {
+          tag =  277
+          description = SamplesPerPixel
+          type =  3
+          type_name = short
+          count =  1
+          length_in_bytes =  2
+          value_or_offset =  1
+          value_or_offset_is_value =  1
+          values =  1
+        }
+
+        [1,9] =
+        {
+          tag =  278
+          description = RowsPerStrip
+          type =  4
+          type_name = long
+          count =  1
+          length_in_bytes =  4
+          value_or_offset =  1324
+          value_or_offset_is_value =  1
+          values =  1324
+        }
+
+        [1,10] =
+        {
+          tag =  279
+          description = StripByteCounts
+          type =  4
+          type_name = long
+          count =  1
+          length_in_bytes =  4
+          value_or_offset =  5327776
+          value_or_offset_is_value =  1
+          values =  5327776
+        }
+
+        [1,11] =
+        {
+          tag =  284
+          description = PlanarConfiguration
+          type =  3
+          type_name = short
+          count =  1
+          length_in_bytes =  2
+          value_or_offset =  1
+          value_or_offset_is_value =  1
+          values =  1
+        }
+
+        [1,12] =
+        {
+          tag =  33421
+          description = CFARepeatPatternDim
+          type =  3
+          type_name = short
+          count =  2
+          length_in_bytes =  4
+          value_or_offset =  2
+          value_or_offset_is_value =  1
+          values =
+
+             2   2
+
+        }
+
+        [1,13] =
+        {
+          tag =  33422
+          description = CFAPattern
+          type =  1
+          type_name = byte
+          count =  4
+          length_in_bytes =  4
+          value_or_offset =  33620224
+          value_or_offset_is_value =  1
+          values =
+
+             2   1   1   0
+
+        }
+
+        [1,14] =
+        {
+          tag =  50710
+          description = CFAPlaneColor
+          type =  1
+          type_name = byte
+          count =  3
+          length_in_bytes =  3
+          value_or_offset =  66048
+          value_or_offset_is_value =  1
+          values =
+
+             0   1   2
+
+        }
+
+        [1,15] =
+        {
+          tag =  50711
+          description = CFALayout
+          type =  3
+          type_name = short
+          count =  1
+          length_in_bytes =  2
+          value_or_offset =  1
+          value_or_offset_is_value =  1
+          values =  1
+        }
+
+        [1,16] =
+        {
+          tag =  50713
+          description = BlackLevelRepeatDim
+          type =  3
+          type_name = short
+          count =  2
+          length_in_bytes =  4
+          value_or_offset =  1
+          value_or_offset_is_value =  1
+          values =
+
+             1   1
+
+        }
+
+        [1,17] =
+        {
+          tag =  50714
+          description = BlackLevel
+          type =  5
+          type_name = rational
+          count =  1
+          length_in_bytes =  8
+          value_or_offset =  7372
+          value_or_offset_is_value = 0
+          values = 0
+        }
+
+        [1,18] =
+        {
+          tag =  50717
+          description = WhiteLevel
+          type =  3
+          type_name = short
+          count =  1
+          length_in_bytes =  2
+          value_or_offset =  4095
+          value_or_offset_is_value =  1
+          values =  4095
+        }
+
+        [1,19] =
+        {
+          tag =  50718
+          description = DefaultScale
+          type =  5
+          type_name = rational
+          count =  2
+          length_in_bytes =  16
+          value_or_offset =  7380
+          value_or_offset_is_value = 0
+          values =
+
+             1   1
+
+        }
+
+        [1,20] =
+        {
+          tag =  50719
+          description = DefaultCropOrigin
+          type =  5
+          type_name = rational
+          count =  2
+          length_in_bytes =  16
+          value_or_offset =  7396
+          value_or_offset_is_value = 0
+          values =
+
+             6   6
+
+        }
+
+        [1,21] =
+        {
+          tag =  50720
+          description = DefaultCropSize
+          type =  5
+          type_name = rational
+          count =  2
+          length_in_bytes =  16
+          value_or_offset =  7412
+          value_or_offset_is_value = 0
+          values =
+
+             2000   1312
+
+        }
+
+        [1,22] =
+        {
+          tag =  50733
+          description = BayerGreenSplit
+          type =  4
+          type_name = long
+          count =  1
+          length_in_bytes =  4
+          value_or_offset = 0
+          value_or_offset_is_value =  1
+          values = 0
+        }
+
+        [1,23] =
+        {
+          tag =  50738
+          description = AntiAliasStrength
+          type =  5
+          type_name = rational
+          count =  1
+          length_in_bytes =  8
+          value_or_offset =  7428
+          value_or_offset_is_value = 0
+          values =  1
+        }
+
+        [1,24] =
+        {
+          tag =  50780
+          description = BestQualityScale
+          type =  5
+          type_name = rational
+          count =  1
+          length_in_bytes =  8
+          value_or_offset =  7436
+          value_or_offset_is_value = 0
+          values =  1
+        }
+
+      }
+
+      [1,2] =
+
+      {
+        [1,1] =
+        {
+          tag =  254
+          description = NewSubfileType
+          type =  4
+          type_name = long
+          count =  1
+          length_in_bytes =  4
+          value_or_offset =  1
+          value_or_offset_is_value =  1
+          values =  1
+        }
+
+        [1,2] =
+        {
+          tag =  256
+          description = ImageWidth
+          type =  4
+          type_name = long
+          count =  1
+          length_in_bytes =  4
+          value_or_offset =  1024
+          value_or_offset_is_value =  1
+          values =  1024
+        }
+
+        [1,3] =
+        {
+          tag =  257
+          description = ImageLength
+          type =  4
+          type_name = long
+          count =  1
+          length_in_bytes =  4
+          value_or_offset =  672
+          value_or_offset_is_value =  1
+          values =  672
+        }
+
+        [1,4] =
+        {
+          tag =  258
+          description = BitsPerSample
+          type =  3
+          type_name = short
+          count =  3
+          length_in_bytes =  6
+          value_or_offset =  7630
+          value_or_offset_is_value = 0
+          values =
+
+             8   8   8
+
+        }
+
+        [1,5] =
+        {
+          tag =  259
+          description = Compression
+          type =  3
+          type_name = short
+          count =  1
+          length_in_bytes =  2
+          value_or_offset =  7
+          value_or_offset_is_value =  1
+          values =  7
+        }
+
+        [1,6] =
+        {
+          tag =  262
+          description = PhotometricInterpretation
+          type =  3
+          type_name = short
+          count =  1
+          length_in_bytes =  2
+          value_or_offset =  6
+          value_or_offset_is_value =  1
+          values =  6
+        }
+
+        [1,7] =
+        {
+          tag =  273
+          description = StripOffsets
+          type =  4
+          type_name = long
+          count =  1
+          length_in_bytes =  4
+          value_or_offset =  136946
+          value_or_offset_is_value =  1
+          values =  136946
+        }
+
+        [1,8] =
+        {
+          tag =  277
+          description = SamplesPerPixel
+          type =  3
+          type_name = short
+          count =  1
+          length_in_bytes =  2
+          value_or_offset =  3
+          value_or_offset_is_value =  1
+          values =  3
+        }
+
+        [1,9] =
+        {
+          tag =  278
+          description = RowsPerStrip
+          type =  4
+          type_name = long
+          count =  1
+          length_in_bytes =  4
+          value_or_offset =  672
+          value_or_offset_is_value =  1
+          values =  672
+        }
+
+        [1,10] =
+        {
+          tag =  279
+          description = StripByteCounts
+          type =  4
+          type_name = long
+          count =  1
+          length_in_bytes =  4
+          value_or_offset =  38360
+          value_or_offset_is_value =  1
+          values =  38360
+        }
+
+        [1,11] =
+        {
+          tag =  284
+          description = PlanarConfiguration
+          type =  3
+          type_name = short
+          count =  1
+          length_in_bytes =  2
+          value_or_offset =  1
+          value_or_offset_is_value =  1
+          values =  1
+        }
+
+        [1,12] =
+        {
+          tag =  529
+          description = YCbCrCoefficients
+          type =  5
+          type_name = rational
+          count =  3
+          length_in_bytes =  24
+          value_or_offset =  7636
+          value_or_offset_is_value = 0
+          values =
+
+             0.29900   0.58700   0.11400
+
+        }
+
+        [1,13] =
+        {
+          tag =  530
+          description = YCbCrSubSampling
+          type =  3
+          type_name = short
+          count =  2
+          length_in_bytes =  4
+          value_or_offset =  2
+          value_or_offset_is_value =  1
+          values =
+
+             2   2
+
+        }
+
+        [1,14] =
+        {
+          tag =  531
+          description = YCbCrPositioning
+          type =  3
+          type_name = short
+          count =  1
+          length_in_bytes =  2
+          value_or_offset =  2
+          value_or_offset_is_value =  1
+          values =  2
+        }
+
+        [1,15] =
+        {
+          tag =  532
+          description = ReferenceBlackWhite
+          type =  5
+          type_name = rational
+          count =  6
+          length_in_bytes =  48
+          value_or_offset =  7660
+          value_or_offset_is_value = 0
+          values =
+
+               0   255   128   255   128   255
+
+        }
+
+      }
+
+    }
+
+    sub_ifd_offsets =
+
+       7078   7444
+
+  }
+
+  [1,18] =
+  {
+    tag =  700
+    description = XMP
+    type =  1
+    type_name = byte
+    count =  6206
+    length_in_bytes =  6206
+    value_or_offset =  530
+    value_or_offset_is_value = 0
+    values =
+
+     Columns 1 through 12:
+
+        60    63   120   112    97    99   107   101   116    32    98   101
+
+     Columns 13 through 24:
+
+       103   105   110    61    39   239   187   191    39    32   105   100
+
+     Columns 25 through 36:
+
+        61    39    87    53    77    48    77   112    67   101   104   105
+
+     Columns 37 through 48:
+
+        72   122   114   101    83   122    78    84    99   122   107    99
+
+     Columns 49 through 60:
+
+        57   100    39    63    62    10    60   120    58   120   109   112
+
+     Columns 61 through 72:
+
+       109   101   116    97    32   120   109   108   110   115    58   120
+
+     Columns 73 through 84:
+
+        61    39    97   100   111    98   101    58   110   115    58   109
+
+     Columns 85 through 96:
+
+       101   116    97    47    39    32   120    58   120   109   112   116
+
+     Columns 97 through 108:
+
+       107    61    39    88    77    80    32   116   111   111   108   107
+
+     Columns 109 through 120:
+
+       105   116    32    51    46    48    45    50    56    44    32   102
+
+     Columns 121 through 132:
+
+       114    97   109   101   119   111   114   107    32    49    46    54
+
+     Columns 133 through 144:
+
+        39    62    10    60   114   100   102    58    82    68    70    32
+
+     Columns 145 through 156:
+
+       120   109   108   110   115    58   114   100   102    61    39   104
+
+     Columns 157 through 168:
+
+       116   116   112    58    47    47   119   119   119    46   119    51
+
+     Columns 169 through 180:
+
+        46   111   114   103    47    49    57    57    57    47    48    50
+
+     Columns 181 through 192:
+
+        47    50    50    45   114   100   102    45   115   121   110   116
+
+     Columns 193 through 204:
+
+        97   120    45   110   115    35    39    32   120   109   108   110
+
+     Columns 205 through 216:
+
+       115    58   105    88    61    39   104   116   116   112    58    47
+
+     Columns 217 through 228:
+
+        47   110   115    46    97   100   111    98   101    46    99   111
+
+     Columns 229 through 240:
+
+       109    47   105    88    47    49    46    48    47    39    62    10
+
+     Columns 241 through 252:
+
+        10    32    60   114   100   102    58    68   101   115    99   114
+
+     Columns 253 through 264:
+
+       105   112   116   105   111   110    32   114   100   102    58    97
+
+     Columns 265 through 276:
+
+        98   111   117   116    61    39    39    10    32    32   120   109
+
+     Columns 277 through 288:
+
+       108   110   115    58   101   120   105   102    61    39   104   116
+
+     Columns 289 through 300:
+
+       116   112    58    47    47   110   115    46    97   100   111    98
+
+     Columns 301 through 312:
+
+       101    46    99   111   109    47   101   120   105   102    47    49
+
+     Columns 313 through 324:
+
+        46    48    47    39    62    10    32    32    60   101   120   105
+
+     Columns 325 through 336:
+
+       102    58    69   120   112   111   115   117   114   101    84   105
+
+     Columns 337 through 348:
+
+       109   101    62    49    47    54    48    60    47   101   120   105
+
+     Columns 349 through 360:
+
+       102    58    69   120   112   111   115   117   114   101    84   105
+
+     Columns 361 through 372:
+
+       109   101    62    10    32    32    60   101   120   105   102    58
+
+     Columns 373 through 384:
+
+        83   104   117   116   116   101   114    83   112   101   101   100
+
+     Columns 385 through 396:
+
+        86    97   108   117   101    62    53    57    48    54    56    57
+
+     Columns 397 through 408:
+
+        49    47    49    48    48    48    48    48    48    60    47   101
+
+     Columns 409 through 420:
+
+       120   105   102    58    83   104   117   116   116   101   114    83
+
+     Columns 421 through 432:
+
+       112   101   101   100    86    97   108   117   101    62    10    32
+
+     Columns 433 through 444:
+
+        32    60   101   120   105   102    58    70    78   117   109    98
+
+     Columns 445 through 456:
+
+       101   114    62    50    55    47    49    48    60    47   101   120
+
+     Columns 457 through 468:
+
+       105   102    58    70    78   117   109    98   101   114    62    10
+
+     Columns 469 through 480:
+
+        32    32    60   101   120   105   102    58    65   112   101   114
+
+     Columns 481 through 492:
+
+       116   117   114   101    86    97   108   117   101    62    50    56
+
+     Columns 493 through 504:
+
+        54    53    57    49    57    47    49    48    48    48    48    48
+
+     Columns 505 through 516:
+
+        48    60    47   101   120   105   102    58    65   112   101   114
+
+     Columns 517 through 528:
+
+       116   117   114   101    86    97   108   117   101    62    10    32
+
+     Columns 529 through 540:
+
+        32    60   101   120   105   102    58    69   120   112   111   115
+
+     Columns 541 through 552:
+
+       117   114   101    80   114   111   103   114    97   109    62    51
+
+     Columns 553 through 564:
+
+        60    47   101   120   105   102    58    69   120   112   111   115
+
+     Columns 565 through 576:
+
+       117   114   101    80   114   111   103   114    97   109    62    10
+
+     Columns 577 through 588:
+
+        32    32    60   101   120   105   102    58    73    83    79    83
+
+     Columns 589 through 600:
+
+       112   101   101   100    82    97   116   105   110   103   115    62
+
+     Columns 601 through 612:
+
+        10    32    32    32    60   114   100   102    58    83   101   113
+
+     Columns 613 through 624:
+
+        62    10    32    32    32    32    60   114   100   102    58   108
+
+     Columns 625 through 636:
+
+       105    62    50    48    48    60    47   114   100   102    58   108
+
+     Columns 637 through 648:
+
+       105    62    10    32    32    32    60    47   114   100   102    58
+
+     Columns 649 through 660:
+
+        83   101   113    62    10    32    32    60    47   101   120   105
+
+     Columns 661 through 672:
+
+       102    58    73    83    79    83   112   101   101   100    82    97
+
+     Columns 673 through 684:
+
+       116   105   110   103   115    62    10    32    32    60   101   120
+
+     Columns 685 through 696:
+
+       105   102    58    68    97   116   101    84   105   109   101    79
+
+     Columns 697 through 708:
+
+       114   105   103   105   110    97   108    62    50    48    48    53
+
+     Columns 709 through 720:
+
+        45    48    57    45    48    51    84    50    48    58    53    56
+
+     Columns 721 through 732:
+
+        58    52    52    43    48    51    58    48    48    60    47   101
+
+     Columns 733 through 744:
+
+       120   105   102    58    68    97   116   101    84   105   109   101
+
+     Columns 745 through 756:
+
+        79   114   105   103   105   110    97   108    62    10    32    32
+
+     Columns 757 through 768:
+
+        60   101   120   105   102    58    69   120   112   111   115   117
+
+     Columns 769 through 780:
+
+       114   101    66   105    97   115    86    97   108   117   101    62
+
+     Columns 781 through 792:
+
+        48    47    49    60    47   101   120   105   102    58    69   120
+
+     Columns 793 through 804:
+
+       112   111   115   117   114   101    66   105    97   115    86    97
+
+     Columns 805 through 816:
+
+       108   117   101    62    10    32    32    60   101   120   105   102
+
+     Columns 817 through 828:
+
+        58    77    97   120    65   112   101   114   116   117   114   101
+
+     Columns 829 through 840:
+
+        86    97   108   117   101    62    49    54    47    49    48    60
+
+     Columns 841 through 852:
+
+        47   101   120   105   102    58    77    97   120    65   112   101
+
+     Columns 853 through 864:
+
+       114   116   117   114   101    86    97   108   117   101    62    10
+
+     Columns 865 through 876:
+
+        32    32    60   101   120   105   102    58    77   101   116   101
+
+     Columns 877 through 888:
+
+       114   105   110   103    77   111   100   101    62    53    60    47
+
+     Columns 889 through 900:
+
+       101   120   105   102    58    77   101   116   101   114   105   110
+
+     Columns 901 through 912:
+
+       103    77   111   100   101    62    10    32    32    60   101   120
+
+     Columns 913 through 924:
+
+       105   102    58    70   111    99    97   108    76   101   110   103
+
+     Columns 925 through 936:
+
+       116   104    62    53    48    47    49    60    47   101   120   105
+
+     Columns 937 through 948:
+
+       102    58    70   111    99    97   108    76   101   110   103   116
+
+     Columns 949 through 960:
+
+       104    62    10    32    60    47   114   100   102    58    68   101
+
+     Columns 961 through 972:
+
+       115    99   114   105   112   116   105   111   110    62    10    10
+
+     Columns 973 through 984:
+
+        32    60   114   100   102    58    68   101   115    99   114   105
+
+     Columns 985 through 996:
+
+       112   116   105   111   110    32   114   100   102    58    97    98
+
+     Columns 997 through 1008:
+
+       111   117   116    61    39    39    10    32    32   120   109   108
+
+     Columns 1009 through 1020:
+
+       110   115    58    97   117   120    61    39   104   116   116   112
+
+     Columns 1021 through 1032:
+
+        58    47    47   110   115    46    97   100   111    98   101    46
+
+     Columns 1033 through 1044:
+
+        99   111   109    47   101   120   105   102    47    49    46    48
+
+     Columns 1045 through 1056:
+
+        47    97   117   120    47    39    62    10    32    32    60    97
+
+     Columns 1057 through 1068:
+
+       117   120    58    76   101   110   115    62    53    48    46    48
+
+     Columns 1069 through 1080:
+
+        32   109   109    32   102    47    49    46    56    60    47    97
+
+     Columns 1081 through 1092:
+
+       117   120    58    76   101   110   115    62    10    32    60    47
+
+     Columns 1093 through 1104:
+
+       114   100   102    58    68   101   115    99   114   105   112   116
+
+     Columns 1105 through 1116:
+
+       105   111   110    62    10    10    32    60   114   100   102    58
+
+     Columns 1117 through 1128:
+
+        68   101   115    99   114   105   112   116   105   111   110    32
+
+     Columns 1129 through 1140:
+
+       114   100   102    58    97    98   111   117   116    61    39    39
+
+     Columns 1141 through 1152:
+
+        10    32    32   120   109   108   110   115    58   112   100   102
+
+     Columns 1153 through 1164:
+
+        61    39   104   116   116   112    58    47    47   110   115    46
+
+     Columns 1165 through 1176:
+
+        97   100   111    98   101    46    99   111   109    47   112   100
+
+     Columns 1177 through 1188:
+
+       102    47    49    46    51    47    39    62    10    32    60    47
+
+     Columns 1189 through 1200:
+
+       114   100   102    58    68   101   115    99   114   105   112   116
+
+     Columns 1201 through 1212:
+
+       105   111   110    62    10    10    32    60   114   100   102    58
+
+     Columns 1213 through 1224:
+
+        68   101   115    99   114   105   112   116   105   111   110    32
+
+     Columns 1225 through 1236:
+
+       114   100   102    58    97    98   111   117   116    61    39    39
+
+     Columns 1237 through 1248:
+
+        10    32    32   120   109   108   110   115    58   112   104   111
+
+     Columns 1249 through 1260:
+
+       116   111   115   104   111   112    61    39   104   116   116   112
+
+     Columns 1261 through 1272:
+
+        58    47    47   110   115    46    97   100   111    98   101    46
+
+     Columns 1273 through 1284:
+
+        99   111   109    47   112   104   111   116   111   115   104   111
+
+     Columns 1285 through 1296:
+
+       112    47    49    46    48    47    39    62    10    32    60    47
+
+     Columns 1297 through 1308:
+
+       114   100   102    58    68   101   115    99   114   105   112   116
+
+     Columns 1309 through 1320:
+
+       105   111   110    62    10    10    32    60   114   100   102    58
+
+     Columns 1321 through 1332:
+
+        68   101   115    99   114   105   112   116   105   111   110    32
+
+     Columns 1333 through 1344:
+
+       114   100   102    58    97    98   111   117   116    61    39    39
+
+     Columns 1345 through 1356:
+
+        10    32    32   120   109   108   110   115    58   116   105   102
+
+     Columns 1357 through 1368:
+
+       102    61    39   104   116   116   112    58    47    47   110   115
+
+     Columns 1369 through 1380:
+
+        46    97   100   111    98   101    46    99   111   109    47   116
+
+     Columns 1381 through 1392:
+
+       105   102   102    47    49    46    48    47    39    62    10    32
+
+     Columns 1393 through 1404:
+
+        32    60   116   105   102   102    58    77    97   107   101    62
+
+     Columns 1405 through 1416:
+
+        78    73    75    79    78    32    67    79    82    80    79    82
+
+     Columns 1417 through 1428:
+
+        65    84    73    79    78    60    47   116   105   102   102    58
+
+     Columns 1429 through 1440:
+
+        77    97   107   101    62    10    32    32    60   116   105   102
+
+     Columns 1441 through 1452:
+
+       102    58    77   111   100   101   108    62    78    73    75    79
+
+     Columns 1453 through 1464:
+
+        78    32    68    49    60    47   116   105   102   102    58    77
+
+     Columns 1465 through 1476:
+
+       111   100   101   108    62    10    32    32    60   116   105   102
+
+     Columns 1477 through 1488:
+
+       102    58    68    97   116   101    84   105   109   101    62    50
+
+     Columns 1489 through 1500:
+
+        48    48    53    45    48    57    45    48    51    84    50    48
+
+     Columns 1501 through 1512:
+
+        58    53    56    58    52    52    43    48    51    58    48    48
+
+     Columns 1513 through 1524:
+
+        60    47   116   105   102   102    58    68    97   116   101    84
+
+     Columns 1525 through 1536:
+
+       105   109   101    62    10    32    32    60   116   105   102   102
+
+     Columns 1537 through 1548:
+
+        58    79   114   105   101   110   116    97   116   105   111   110
+
+     Columns 1549 through 1560:
+
+        62    49    60    47   116   105   102   102    58    79   114   105
+
+     Columns 1561 through 1572:
+
+       101   110   116    97   116   105   111   110    62    10    32    60
+
+     Columns 1573 through 1584:
+
+        47   114   100   102    58    68   101   115    99   114   105   112
+
+     Columns 1585 through 1596:
+
+       116   105   111   110    62    10    10    32    60   114   100   102
+
+     Columns 1597 through 1608:
+
+        58    68   101   115    99   114   105   112   116   105   111   110
+
+     Columns 1609 through 1620:
+
+        32   114   100   102    58    97    98   111   117   116    61    39
+
+     Columns 1621 through 1632:
+
+        39    10    32    32   120   109   108   110   115    58   120    97
+
+     Columns 1633 through 1644:
+
+       112    61    39   104   116   116   112    58    47    47   110   115
+
+     Columns 1645 through 1656:
+
+        46    97   100   111    98   101    46    99   111   109    47   120
+
+     Columns 1657 through 1668:
+
+        97   112    47    49    46    48    47    39    62    10    32    32
+
+     Columns 1669 through 1680:
+
+        60   120    97   112    58    67   114   101    97   116   111   114
+
+     Columns 1681 through 1692:
+
+        84   111   111   108    62    86   101   114    46    49    46    48
+
+     Columns 1693 through 1704:
+
+        53    60    47   120    97   112    58    67   114   101    97   116
+
+     Columns 1705 through 1716:
+
+       111   114    84   111   111   108    62    10    32    60    47   114
+
+     Columns 1717 through 1728:
+
+       100   102    58    68   101   115    99   114   105   112   116   105
+
+     Columns 1729 through 1740:
+
+       111   110    62    10    10    32    60   114   100   102    58    68
+
+     Columns 1741 through 1752:
+
+       101   115    99   114   105   112   116   105   111   110    32   114
+
+     Columns 1753 through 1764:
+
+       100   102    58    97    98   111   117   116    61    39    39    10
+
+     Columns 1765 through 1776:
+
+        32    32   120   109   108   110   115    58   120    97   112    82
+
+     Columns 1777 through 1788:
+
+       105   103   104   116   115    61    39   104   116   116   112    58
+
+     Columns 1789 through 1800:
+
+        47    47   110   115    46    97   100   111    98   101    46    99
+
+     Columns 1801 through 1812:
+
+       111   109    47   120    97   112    47    49    46    48    47   114
+
+     Columns 1813 through 1824:
+
+       105   103   104   116   115    47    39    62    10    32    60    47
+
+     Columns 1825 through 1836:
+
+       114   100   102    58    68   101   115    99   114   105   112   116
+
+     Columns 1837 through 1848:
+
+       105   111   110    62    10    10    32    60   114   100   102    58
+
+     Columns 1849 through 1860:
+
+        68   101   115    99   114   105   112   116   105   111   110    32
+
+     Columns 1861 through 1872:
+
+       114   100   102    58    97    98   111   117   116    61    39    39
+
+     Columns 1873 through 1884:
+
+        10    32    32   120   109   108   110   115    58   100    99    61
+
+     Columns 1885 through 1896:
+
+        39   104   116   116   112    58    47    47   112   117   114   108
+
+     Columns 1897 through 1908:
+
+        46   111   114   103    47   100    99    47   101   108   101   109
+
+     Columns 1909 through 1920:
+
+       101   110   116   115    47    49    46    49    47    39    62    10
+
+     Columns 1921 through 1932:
+
+        32    32    60   100    99    58   114   105   103   104   116   115
+
+     Columns 1933 through 1944:
+
+        62    10    32    32    32    60   114   100   102    58    65   108
+
+     Columns 1945 through 1956:
+
+       116    62    10    32    32    32    32    60   114   100   102    58
+
+     Columns 1957 through 1968:
+
+       108   105    32   120   109   108    58   108    97   110   103    61
+
+     Columns 1969 through 1980:
+
+        39   120    45   100   101   102    97   117   108   116    39    62
+
+     Columns 1981 through 1992:
+
+        67   111   112   121   114   105   103   104   116    44    72    97
+
+     Columns 1993 through 2004:
+
+       114   114   105    32    79   106    97   110   101   110    44    50
+
+     Columns 2005 through 2016:
+
+        48    48    53    60    47   114   100   102    58   108   105    62
+
+     Columns 2017 through 2028:
+
+        10    32    32    32    60    47   114   100   102    58    65   108
+
+     Columns 2029 through 2040:
+
+       116    62    10    32    32    60    47   100    99    58   114   105
+
+     Columns 2041 through 2052:
+
+       103   104   116   115    62    10    32    60    47   114   100   102
+
+     Columns 2053 through 2064:
+
+        58    68   101   115    99   114   105   112   116   105   111   110
+
+     Columns 2065 through 2076:
+
+        62    10    10    60    47   114   100   102    58    82    68    70
+
+     Columns 2077 through 2088:
+
+        62    10    60    47   120    58   120   109   112   109   101   116
+
+     Columns 2089 through 2100:
+
+        97    62    10    32    32    32    32    32    32    32    32    32
+
+     Columns 2101 through 2112:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2113 through 2124:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2125 through 2136:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2137 through 2148:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2149 through 2160:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2161 through 2172:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2173 through 2184:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2185 through 2196:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2197 through 2208:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2209 through 2220:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2221 through 2232:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2233 through 2244:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2245 through 2256:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2257 through 2268:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2269 through 2280:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2281 through 2292:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2293 through 2304:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2305 through 2316:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2317 through 2328:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2329 through 2340:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2341 through 2352:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2353 through 2364:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2365 through 2376:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2377 through 2388:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2389 through 2400:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2401 through 2412:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2413 through 2424:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2425 through 2436:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2437 through 2448:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2449 through 2460:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2461 through 2472:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2473 through 2484:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2485 through 2496:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2497 through 2508:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2509 through 2520:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2521 through 2532:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2533 through 2544:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2545 through 2556:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2557 through 2568:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2569 through 2580:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2581 through 2592:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2593 through 2604:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2605 through 2616:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2617 through 2628:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2629 through 2640:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2641 through 2652:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2653 through 2664:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2665 through 2676:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2677 through 2688:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2689 through 2700:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2701 through 2712:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2713 through 2724:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2725 through 2736:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2737 through 2748:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2749 through 2760:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2761 through 2772:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2773 through 2784:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2785 through 2796:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2797 through 2808:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2809 through 2820:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2821 through 2832:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2833 through 2844:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2845 through 2856:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2857 through 2868:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2869 through 2880:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2881 through 2892:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2893 through 2904:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2905 through 2916:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2917 through 2928:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2929 through 2940:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2941 through 2952:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2953 through 2964:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2965 through 2976:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2977 through 2988:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 2989 through 3000:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3001 through 3012:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3013 through 3024:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3025 through 3036:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3037 through 3048:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3049 through 3060:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3061 through 3072:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3073 through 3084:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3085 through 3096:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3097 through 3108:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3109 through 3120:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3121 through 3132:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3133 through 3144:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3145 through 3156:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3157 through 3168:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3169 through 3180:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3181 through 3192:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3193 through 3204:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3205 through 3216:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3217 through 3228:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3229 through 3240:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3241 through 3252:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3253 through 3264:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3265 through 3276:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3277 through 3288:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3289 through 3300:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3301 through 3312:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3313 through 3324:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3325 through 3336:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3337 through 3348:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3349 through 3360:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3361 through 3372:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3373 through 3384:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3385 through 3396:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3397 through 3408:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3409 through 3420:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3421 through 3432:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3433 through 3444:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3445 through 3456:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3457 through 3468:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3469 through 3480:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3481 through 3492:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3493 through 3504:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3505 through 3516:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3517 through 3528:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3529 through 3540:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3541 through 3552:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3553 through 3564:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3565 through 3576:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3577 through 3588:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3589 through 3600:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3601 through 3612:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3613 through 3624:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3625 through 3636:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3637 through 3648:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3649 through 3660:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3661 through 3672:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3673 through 3684:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3685 through 3696:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3697 through 3708:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3709 through 3720:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3721 through 3732:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3733 through 3744:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3745 through 3756:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3757 through 3768:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3769 through 3780:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3781 through 3792:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3793 through 3804:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3805 through 3816:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3817 through 3828:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3829 through 3840:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3841 through 3852:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3853 through 3864:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3865 through 3876:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3877 through 3888:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3889 through 3900:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3901 through 3912:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3913 through 3924:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3925 through 3936:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3937 through 3948:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3949 through 3960:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3961 through 3972:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3973 through 3984:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3985 through 3996:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 3997 through 4008:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4009 through 4020:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4021 through 4032:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4033 through 4044:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4045 through 4056:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4057 through 4068:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4069 through 4080:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4081 through 4092:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4093 through 4104:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4105 through 4116:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4117 through 4128:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4129 through 4140:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4141 through 4152:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4153 through 4164:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4165 through 4176:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4177 through 4188:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4189 through 4200:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4201 through 4212:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4213 through 4224:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4225 through 4236:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4237 through 4248:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4249 through 4260:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4261 through 4272:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4273 through 4284:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4285 through 4296:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4297 through 4308:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4309 through 4320:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4321 through 4332:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4333 through 4344:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4345 through 4356:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4357 through 4368:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4369 through 4380:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4381 through 4392:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4393 through 4404:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4405 through 4416:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4417 through 4428:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4429 through 4440:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4441 through 4452:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4453 through 4464:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4465 through 4476:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4477 through 4488:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4489 through 4500:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4501 through 4512:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4513 through 4524:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4525 through 4536:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4537 through 4548:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4549 through 4560:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4561 through 4572:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4573 through 4584:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4585 through 4596:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4597 through 4608:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4609 through 4620:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4621 through 4632:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4633 through 4644:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4645 through 4656:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4657 through 4668:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4669 through 4680:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4681 through 4692:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4693 through 4704:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4705 through 4716:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4717 through 4728:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4729 through 4740:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4741 through 4752:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4753 through 4764:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4765 through 4776:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4777 through 4788:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4789 through 4800:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4801 through 4812:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4813 through 4824:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4825 through 4836:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4837 through 4848:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4849 through 4860:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4861 through 4872:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4873 through 4884:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4885 through 4896:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4897 through 4908:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4909 through 4920:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4921 through 4932:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4933 through 4944:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4945 through 4956:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4957 through 4968:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4969 through 4980:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4981 through 4992:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 4993 through 5004:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5005 through 5016:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5017 through 5028:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5029 through 5040:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5041 through 5052:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5053 through 5064:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5065 through 5076:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5077 through 5088:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5089 through 5100:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5101 through 5112:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5113 through 5124:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5125 through 5136:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5137 through 5148:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5149 through 5160:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5161 through 5172:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5173 through 5184:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5185 through 5196:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5197 through 5208:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5209 through 5220:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5221 through 5232:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5233 through 5244:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5245 through 5256:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5257 through 5268:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5269 through 5280:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5281 through 5292:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5293 through 5304:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5305 through 5316:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5317 through 5328:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5329 through 5340:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5341 through 5352:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5353 through 5364:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5365 through 5376:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5377 through 5388:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5389 through 5400:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5401 through 5412:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5413 through 5424:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5425 through 5436:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5437 through 5448:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5449 through 5460:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5461 through 5472:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5473 through 5484:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5485 through 5496:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5497 through 5508:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5509 through 5520:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5521 through 5532:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5533 through 5544:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5545 through 5556:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5557 through 5568:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5569 through 5580:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5581 through 5592:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5593 through 5604:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5605 through 5616:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5617 through 5628:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5629 through 5640:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5641 through 5652:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5653 through 5664:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5665 through 5676:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5677 through 5688:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5689 through 5700:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5701 through 5712:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5713 through 5724:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5725 through 5736:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5737 through 5748:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5749 through 5760:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5761 through 5772:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5773 through 5784:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5785 through 5796:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5797 through 5808:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5809 through 5820:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5821 through 5832:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5833 through 5844:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5845 through 5856:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5857 through 5868:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5869 through 5880:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5881 through 5892:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5893 through 5904:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5905 through 5916:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5917 through 5928:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5929 through 5940:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5941 through 5952:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5953 through 5964:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5965 through 5976:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5977 through 5988:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 5989 through 6000:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6001 through 6012:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6013 through 6024:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6025 through 6036:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6037 through 6048:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6049 through 6060:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6061 through 6072:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6073 through 6084:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6085 through 6096:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6097 through 6108:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6109 through 6120:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6121 through 6132:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6133 through 6144:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6145 through 6156:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6157 through 6168:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6169 through 6180:
+
+        32    32    32    32    32    32    32    32    32    32    32    32
+
+     Columns 6181 through 6192:
+
+        32    32    32    32    32    32    10    60    63   120   112    97
+
+     Columns 6193 through 6204:
+
+        99   107   101   116    32   101   110   100    61    39   119    39
+
+     Columns 6205 and 6206:
+
+        63    62
+
+  }
+
+  [1,19] =
+  {
+    tag =  33432
+    description = Copyright
+    type =  2
+    type_name = ascii
+    count =  28
+    length_in_bytes =  28
+    value_or_offset =  6736
+    value_or_offset_is_value = 0
+    values = Copyright,Harri Ojanen,2005
+  }
+
+  [1,20] =
+  {
+    tag =  34665
+    description = Exif
+    type =  4
+    type_name = long
+    count =  1
+    length_in_bytes =  4
+    value_or_offset =  7708
+    value_or_offset_is_value =  1
+    values =
+
+    {
+      [1,1] =
+
+      {
+        [1,1] =
+        {
+          tag =  33434
+          description = ExposureTime
+          type =  5
+          type_name = rational
+          count =  1
+          length_in_bytes =  8
+          value_or_offset =  7846
+          value_or_offset_is_value = 0
+          values =  0.016667
+        }
+
+        [1,2] =
+        {
+          tag =  33437
+          description = FNumber
+          type =  5
+          type_name = rational
+          count =  1
+          length_in_bytes =  8
+          value_or_offset =  7854
+          value_or_offset_is_value = 0
+          values =  2.7000
+        }
+
+        [1,3] =
+        {
+          tag =  34850
+          description = ExposureProgram
+          type =  3
+          type_name = short
+          count =  1
+          length_in_bytes =  2
+          value_or_offset =  3
+          value_or_offset_is_value =  1
+          values =  3
+        }
+
+        [1,4] =
+        {
+          tag =  34855
+          description = ISOSpeedRatings
+          type =  3
+          type_name = short
+          count =  1
+          length_in_bytes =  2
+          value_or_offset =  200
+          value_or_offset_is_value =  1
+          values =  200
+        }
+
+        [1,5] =
+        {
+          tag =  36867
+          description = DateTimeOriginal
+          type =  2
+          type_name = ascii
+          count =  20
+          length_in_bytes =  20
+          value_or_offset =  7862
+          value_or_offset_is_value = 0
+          values = 2005:09:03 20:58:44
+        }
+
+        [1,6] =
+        {
+          tag =  37377
+          description = ShutterSpeedValue
+          type =  10
+          type_name = srational
+          count =  1
+          length_in_bytes =  8
+          value_or_offset =  7882
+          value_or_offset_is_value = 0
+          values =  5.9069
+        }
+
+        [1,7] =
+        {
+          tag =  37378
+          description = ApertureValue
+          type =  5
+          type_name = rational
+          count =  1
+          length_in_bytes =  8
+          value_or_offset =  7890
+          value_or_offset_is_value = 0
+          values =  2.8659
+        }
+
+        [1,8] =
+        {
+          tag =  37380
+          description = ExposureBiasValue
+          type =  10
+          type_name = srational
+          count =  1
+          length_in_bytes =  8
+          value_or_offset =  7898
+          value_or_offset_is_value = 0
+          values = 0
+        }
+
+        [1,9] =
+        {
+          tag =  37381
+          description = MaxApertureValue
+          type =  5
+          type_name = rational
+          count =  1
+          length_in_bytes =  8
+          value_or_offset =  7906
+          value_or_offset_is_value = 0
+          values =  1.6000
+        }
+
+        [1,10] =
+        {
+          tag =  37383
+          description = MeteringMode
+          type =  3
+          type_name = short
+          count =  1
+          length_in_bytes =  2
+          value_or_offset =  5
+          value_or_offset_is_value =  1
+          values =  5
+        }
+
+        [1,11] =
+        {
+          tag =  37386
+          description = FocalLength
+          type =  5
+          type_name = rational
+          count =  1
+          length_in_bytes =  8
+          value_or_offset =  7914
+          value_or_offset_is_value = 0
+          values =  50
+        }
+
+      }
+
+    }
+
+    sub_ifd_offsets =  7708
+  }
+
+  [1,21] =
+  {
+    tag =  50706
+    description = DNGVersion
+    type =  1
+    type_name = byte
+    count =  4
+    length_in_bytes =  4
+    value_or_offset =  16777216
+    value_or_offset_is_value =  1
+    values =
+
+       1   0   0   0
+
+  }
+
+  [1,22] =
+  {
+    tag =  50707
+    description = DNGBackwardVersion
+    type =  1
+    type_name = byte
+    count =  4
+    length_in_bytes =  4
+    value_or_offset =  16777216
+    value_or_offset_is_value =  1
+    values =
+
+       1   0   0   0
+
+  }
+
+  [1,23] =
+  {
+    tag =  50708
+    description = UniqueCameraModel
+    type =  2
+    type_name = ascii
+    count =  9
+    length_in_bytes =  9
+    value_or_offset =  6764
+    value_or_offset_is_value = 0
+    values = Nikon D1
+  }
+
+  [1,24] =
+  {
+    tag =  50721
+    description = ColorMatrix1
+    type =  10
+    type_name = srational
+    count =  9
+    length_in_bytes =  72
+    value_or_offset =  6774
+    value_or_offset_is_value = 0
+    values =
+
+     Columns 1 through 6:
+
+       0.831400  -0.289300  -0.043300  -0.661100   1.446700   0.231200
+
+     Columns 7 through 9:
+
+      -0.130700   0.196800   0.890100
+
+  }
+
+  [1,25] =
+  {
+    tag =  50722
+    description = ColorMatrix2
+    type =  10
+    type_name = srational
+    count =  9
+    length_in_bytes =  72
+    value_or_offset =  6846
+    value_or_offset_is_value = 0
+    values =
+
+     Columns 1 through 6:
+
+       0.755900  -0.213000  -0.096500  -0.761100   1.571300   0.197200
+
+     Columns 7 through 9:
+
+      -0.247800   0.304200   0.829000
+
+  }
+
+  [1,26] =
+  {
+    tag =  50727
+    description = AnalogBalance
+    type =  5
+    type_name = rational
+    count =  3
+    length_in_bytes =  24
+    value_or_offset =  6918
+    value_or_offset_is_value = 0
+    values =
+
+       2.3594   1.0000   1.1484
+
+  }
+
+  [1,27] =
+  {
+    tag =  50728
+    description = AsShotNeutral
+    type =  5
+    type_name = rational
+    count =  3
+    length_in_bytes =  24
+    value_or_offset =  6942
+    value_or_offset_is_value = 0
+    values =
+
+       1   1   1
+
+  }
+
+  [1,28] =
+  {
+    tag =  50730
+    description = BaselineExposure
+    type =  10
+    type_name = srational
+    count =  1
+    length_in_bytes =  8
+    value_or_offset =  6966
+    value_or_offset_is_value = 0
+    values = -0.75000
+  }
+
+  [1,29] =
+  {
+    tag =  50731
+    description = BaselineNoise
+    type =  5
+    type_name = rational
+    count =  1
+    length_in_bytes =  8
+    value_or_offset =  6974
+    value_or_offset_is_value = 0
+    values =  1
+  }
+
+  [1,30] =
+  {
+    tag =  50732
+    description = BaselineSharpness
+    type =  5
+    type_name = rational
+    count =  1
+    length_in_bytes =  8
+    value_or_offset =  6982
+    value_or_offset_is_value = 0
+    values =  1.3300
+  }
+
+  [1,31] =
+  {
+    tag =  50734
+    description = LinearResponseLimit
+    type =  5
+    type_name = rational
+    count =  1
+    length_in_bytes =  8
+    value_or_offset =  6990
+    value_or_offset_is_value = 0
+    values =  1
+  }
+
+  [1,32] =
+  {
+    tag =  50736
+    description = LensInfo
+    type =  5
+    type_name = rational
+    count =  4
+    length_in_bytes =  32
+    value_or_offset =  6998
+    value_or_offset_is_value = 0
+    values =
+
+       50.0000   50.0000    1.8000    1.8000
+
+  }
+
+  [1,33] =
+  {
+    tag =  50739
+    description = ShadowScale
+    type =  5
+    type_name = rational
+    count =  1
+    length_in_bytes =  8
+    value_or_offset =  7030
+    value_or_offset_is_value = 0
+    values =  1
+  }
+
+  [1,34] =
+  {
+    tag =  50778
+    description = CalibrationIlluminant1
+    type =  3
+    type_name = short
+    count =  1
+    length_in_bytes =  2
+    value_or_offset =  17
+    value_or_offset_is_value =  1
+    values =  17
+  }
+
+  [1,35] =
+  {
+    tag =  50779
+    description = CalibrationIlluminant2
+    type =  3
+    type_name = short
+    count =  1
+    length_in_bytes =  2
+    value_or_offset =  21
+    value_or_offset_is_value =  1
+    values =  21
+  }
+
+  [1,36] =
+  {
+    tag =  50781
+    description = RawDataUniqueID
+    type =  1
+    type_name = byte
+    count =  16
+    length_in_bytes =  16
+    value_or_offset =  7038
+    value_or_offset_is_value = 0
+    values =
+
+     Columns 1 through 12:
+
+         8   187   127   199    95    95   208   139   190   227    76   165
+
+     Columns 13 through 16:
+
+        46   200   233   190
+
+  }
+
+  [1,37] =
+  {
+    tag =  50827
+    description = OriginalRawFileName
+    type =  1
+    type_name = byte
+    count =  23
+    length_in_bytes =  23
+    value_or_offset =  7054
+    value_or_offset_is_value = 0
+    values =
+
+     Columns 1 through 12:
+
+       108    97   112   115   101   116    95    50    48    48    53    48
+
+     Columns 13 through 23:
+
+        57    48    51    95    52    57    46   110   101   102     0
+
+  }
+
+}
+
+octave:4> diary off

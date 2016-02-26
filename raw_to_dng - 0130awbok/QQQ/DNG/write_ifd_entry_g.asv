@@ -1,0 +1,36 @@
+function offset_data = write_ifd_entry_g(entry, entry_offset, offset_data, byte_order)
+
+global data
+
+%entry
+
+typ = entry.type;
+val = entry.values;
+%val
+%fflush(stdout);
+
+put2g(entry_offset  , entry.tag, byte_order);
+put2g(entry_offset+2, typ, byte_order);
+put4g(entry_offset+4, entry.count, byte_order);
+
+sz = size_of_type(typ);
+N=length(val);
+bytes = sz*N;
+if (typ ==7)
+    opcode_offset_data = 2172116;
+      put_value_g(entry_offset+8, offset_data, 4, byte_order);
+else
+if bytes <= 4
+  for i=1:N
+    put_value_g(entry_offset+8+sz*(i-1), val(i), typ, byte_order);
+  end
+else
+  put_value_g(entry_offset+8, offset_data, 4, byte_order);
+  for i=1:N
+    put_value_g(offset_data, val(i), typ, byte_order);
+    offset_data = offset_data + sz;
+  end
+end
+
+offset_data = round_up(offset_data);
+end

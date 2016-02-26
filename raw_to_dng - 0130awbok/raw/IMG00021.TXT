@@ -1,0 +1,50 @@
+Sensor bits: 12
+RGGB start: 0
+ISP mode: Linear
+FPS: 30.32
+Integration time: 1124 lines 32.94 ms
+A gain 4.595 = 13.199 dB
+D gain 1.000 = 0.000 dB
+ISP gain 1.023 = 0.200 dB
+Equivalent Exposure: 5285 lines
+Exposure_log2: 3242161
+Gain_log2: 2
+Antiflicker: off
+Gain 00: 457
+Gain 01: 271
+Gain 10: 271
+Gain 11: 521
+Black Level 00: 240
+Black Level 01: 240
+Black Level 10: 240
+Black Level 11: 240
+LSC table: 2
+LSC blend: 0
+LSC Mesh strength: 4096
+AWB rg: 257
+AWB bg: 242
+AWB temperature: 5586
+Sinter strength: 17
+Sinter strength1: 184
+Sinter strength4: 255
+Sinter thresh1h: 0
+Sinter thresh4h: 0
+Temper strength: 84
+Iridix strength: 0
+Dp threshold: 2835
+Dp slope: 170
+Sharpening directional: 30
+Sharpening unidirectional: 19
+Demosaic NP offset: 0
+FR sharpen strength: 20
+DS1 sharpen strength: 50
+DS2 sharpen strength: 70
+CCM R_R: 0x0
+CCM R_G: 0x0
+CCM R_B: 0x0
+CCM G_R: 0x0
+CCM G_G: 0x0
+CCM G_B: 0x0
+CCM B_R: 0x0
+CCM B_G: 0x0
+CCM B_B: 0xCC0
